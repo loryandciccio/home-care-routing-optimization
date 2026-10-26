@@ -1,0 +1,15 @@
+# User-specific files, generated artifacts, and input sets not licensed for redistribution
+.DS_Store
+*.log
+*.tmp
+.julia/
+train/
+test/*.json
+train_results/
+test_results/
+TestNO_LS/
+*_plot.png
+*_plot.svg
+*_solution.txt
+Manifest.toml
+LocalPreferences.toml

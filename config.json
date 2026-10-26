@@ -1,0 +1,65 @@
+{
+  "_description": "Central configuration for solver tuning. Edit values here to run experiments without changing source code.",
+  "_fallback_policy": "If config.json is missing, invalid, or a specific key is absent, the code automatically falls back to built-in defaults in main.jl (load_project_config).",
+  "_override_policy": "CLI arguments (for example --pop-size or --generations) override values defined in this file.",
+  "single_run": {
+    "_description": "Default settings for single-instance runs via main.jl.",
+    "pop_size": 50,
+    "generations": 1000,
+    "seed": 42,
+    "plot": true,
+    "plot_format": "svg",
+    "output": "test_instance_2_solution.txt"
+  },
+  "ga": {
+    "_description": "Genetic algorithm behavior and local-search controls.",
+    "tournament_size": 3,
+    "mutation_rate": 0.2,
+    "crossover_rate": 0.5,
+    "elitism_size": 1,
+    "heuristic_init_fraction": 0.2,
+    "min_heuristic_individuals": 2,
+    "log_interval": 100,
+    "local_search_probability": 1.0,
+    "local_search_top_fraction": 1.0,
+    "local_search_max_evals": null,
+    "local_search_max_ms": null,
+    "local_search_order": ["two_opt", "swap", "relocate"],
+    "use_two_opt": true,
+    "two_opt_max_passes": null,
+    "two_opt_max_segment_checks": null,
+    "two_opt_first_improvement": true,
+    "use_inter_route_swap": true,
+    "inter_route_swap_max_tries": null,
+    "use_inter_route_relocate": true,
+    "inter_route_relocate_max_tries": null,
+    "mutation_operator_weights": {
+      "swap": 1.0,
+      "reverse": 1.0,
+      "shuffle": 1.0
+    }
+  },
+  "penalties": {
+    "_description": "Penalty multipliers for soft-constraint guidance during search.",
+    "time_window_penalty_multiplier": 100.0,
+    "return_time_penalty_multiplier": 100.0,
+    "capacity_penalty_multiplier": 100.0,
+    "extra_route_penalty_multiplier": 1000.0
+  },
+  "batch": {
+    "_description": "Default settings used by run_all_tests.jl for train/test sweeps.",
+    "clean_outputs": false,
+    "train": {
+      "pop_size": 200,
+      "generations": 400,
+      "plot": true,
+      "plot_format": "svg"
+    },
+    "test": {
+      "pop_size": 30,
+      "generations": 1000,
+      "plot": true,
+      "plot_format": "svg"
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "instance_name": "synthetic_demo",
+  "nbr_nurses": 2,
+  "capacity_nurse": 3,
+  "benchmark": 0.0,
+  "depot": {
+    "x_coord": 0,
+    "y_coord": 0,
+    "return_time": 30
+  },
+  "patients": {
+    "1": {
+      "x_coord": 1,
+      "y_coord": 0,
+      "demand": 1,
+      "start_time": 0,
+      "end_time": 20,
+      "care_time": 1
+    },
+    "2": {
+      "x_coord": 2,
+      "y_coord": 0,
+      "demand": 1,
+      "start_time": 0,
+      "end_time": 20,
+      "care_time": 1
+    },
+    "3": {
+      "x_coord": 0,
+      "y_coord": 1,
+      "demand": 1,
+      "start_time": 0,
+      "end_time": 20,
+      "care_time": 1
+    },
+    "4": {
+      "x_coord": 0,
+      "y_coord": 2,
+      "demand": 1,
+      "start_time": 0,
+      "end_time": 20,
+      "care_time": 1
+    },
+    "5": {
+      "x_coord": 1,
+      "y_coord": 1,
+      "demand": 1,
+      "start_time": 0,
+      "end_time": 20,
+      "care_time": 1
+    }
+  },
+  "travel_times": [
+    [
+      0.0,
+      1.0,
+      2.0,
+      1.0,
+      2.0,
+      1.41
+    ],
+    [
+      1.0,
+      0.0,
+      1.0,
+      1.41,
+      2.24,
+      1.0
+    ],
+    [
+      2.0,
+      1.0,
+      0.0,
+      2.24,
+      2.83,
+      1.41
+    ],
+    [
+      1.0,
+      1.41,
+      2.24,
+      0.0,
+      1.0,
+      1.0
+    ],
+    [
+      2.0,
+      2.24,
+      2.83,
+      1.0,
+      0.0,
+      1.41
+    ],
+    [
+      1.41,
+      1.0,
+      1.41,
+      1.0,
+      1.41,
+      0.0
+    ]
+  ],
+  "_provenance": "SYNTHETIC example authored for this standalone portfolio copy; not a course dataset or benchmark."
+}
